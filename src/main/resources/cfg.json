@@ -1,0 +1,690 @@
+[
+  {
+    "obfName": "bib",
+    "id": "-1595926131",
+    "fieldMappings": [
+      {
+        "obfName": "h",
+        "desc": "Lbud;",
+        "id": "a"
+      },
+      {
+        "obfName": "Y",
+        "desc": "Lbih;",
+        "id": "b"
+      },
+      {
+        "obfName": "c",
+        "desc": "Lbsa;",
+        "id": "c"
+      },
+      {
+        "obfName": "f",
+        "desc": "Lbsb;",
+        "id": "d"
+      },
+      {
+        "obfName": "t",
+        "desc": "Lbid;",
+        "id": "e"
+      },
+      {
+        "obfName": "k",
+        "desc": "Lbip;",
+        "id": "f"
+      },
+      {
+        "obfName": "m",
+        "desc": "Lblk;",
+        "id": "g"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(Lblk;)V",
+        "id": "a"
+      },
+      {
+        "obfName": "z",
+        "desc": "()Lbib;",
+        "id": "sa"
+      },
+      {
+        "obfName": "W",
+        "desc": "()V",
+        "id": "sb",
+        "inj": [
+          {
+            "id": "-81501631",
+            "pos": 0,
+            "locals": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "obfName": "bud",
+    "id": "618525217",
+    "fieldMappings": [],
+    "methodMappings": [
+      {
+        "obfName": "N",
+        "desc": "()V",
+        "id": "a",
+        "inj": [
+          {
+            "id": "-340888200",
+            "pos": 0,
+            "locals": [
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "obfName": "bih",
+    "id": "80811813",
+    "fieldMappings": [
+      {
+        "obfName": "c",
+        "desc": "F",
+        "id": "b"
+      },
+      {
+        "obfName": "e",
+        "desc": "F",
+        "id": "c"
+      }
+    ],
+    "methodMappings": []
+  },
+  {
+    "obfName": "bsa",
+    "id": "1658017760",
+    "fieldMappings": [
+      {
+        "obfName": "e",
+        "desc": "F",
+        "id": "a"
+      },
+      {
+        "obfName": "g",
+        "desc": "I",
+        "id": "b"
+      },
+      {
+        "obfName": "b",
+        "desc": "Lbrz;",
+        "id": "c"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(Laed;Lvg;)V",
+        "id": "a",
+        "inj": [
+          {
+            "id": "536629487",
+            "pos": 0,
+            "locals": [
+              1,
+              2
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "obfName": "brz",
+    "id": "2017127180",
+    "fieldMappings": [
+      {
+        "obfName": "c",
+        "desc": "Lgw;",
+        "id": "a"
+      }
+    ],
+    "methodMappings": []
+  },
+  {
+    "obfName": "gw",
+    "id": "-1870403137",
+    "fieldMappings": [
+      {
+        "obfName": "l",
+        "desc": "Ljava/net/SocketAddress;",
+        "id": "a"
+      }
+    ],
+    "methodMappings": []
+  },
+  {
+    "obfName": "bsb",
+    "id": "-2123354659",
+    "fieldMappings": [],
+    "methodMappings": []
+  },
+  {
+    "obfName": "vg",
+    "id": "2080559107",
+    "fieldMappings": [
+      {
+        "obfName": "L",
+        "desc": "F",
+        "id": "a"
+      },
+      {
+        "obfName": "s",
+        "desc": "D",
+        "id": "b"
+      },
+      {
+        "obfName": "t",
+        "desc": "D",
+        "id": "c"
+      },
+      {
+        "obfName": "u",
+        "desc": "D",
+        "id": "d"
+      },
+      {
+        "obfName": "p",
+        "desc": "D",
+        "id": "e"
+      },
+      {
+        "obfName": "q",
+        "desc": "D",
+        "id": "f"
+      },
+      {
+        "obfName": "r",
+        "desc": "D",
+        "id": "g"
+      },
+      {
+        "obfName": "z",
+        "desc": "Z",
+        "id": "h"
+      },
+      {
+        "obfName": "v",
+        "desc": "F",
+        "id": "i"
+      },
+      {
+        "obfName": "w",
+        "desc": "F",
+        "id": "j"
+      },
+      {
+        "obfName": "T",
+        "desc": "I",
+        "id": "k"
+      },
+      {
+        "obfName": "U",
+        "desc": "Z",
+        "id": "l"
+      },
+      {
+        "obfName": "P",
+        "desc": "F",
+        "id": "m"
+      },
+      {
+        "obfName": "Q",
+        "desc": "Z",
+        "id": "n"
+      },
+      {
+        "obfName": "E",
+        "desc": "Z",
+        "id": "o"
+      },
+      {
+        "obfName": "F",
+        "desc": "Z",
+        "id": "p"
+      },
+      {
+        "obfName": "m",
+        "desc": "D",
+        "id": "q"
+      },
+      {
+        "obfName": "n",
+        "desc": "D",
+        "id": "r"
+      },
+      {
+        "obfName": "o",
+        "desc": "D",
+        "id": "s"
+      },
+      {
+        "obfName": "A",
+        "desc": "Z",
+        "id": "t"
+      },
+      {
+        "obfName": "B",
+        "desc": "Z",
+        "id": "u"
+      },
+      {
+        "obfName": "C",
+        "desc": "Z",
+        "id": "v"
+      },
+      {
+        "obfName": "V",
+        "desc": "I",
+        "id": "w"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "c",
+        "desc": "()Let;",
+        "id": "a"
+      },
+      {
+        "obfName": "d",
+        "desc": "()Lbhe;",
+        "id": "b"
+      },
+      {
+        "obfName": "g",
+        "desc": "(Z)V",
+        "id": "c"
+      }
+    ]
+  },
+  {
+    "obfName": "bip",
+    "id": "-1230420398",
+    "fieldMappings": [],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(Ljava/lang/String;FFIZ)I",
+        "id": "a",
+        "inj": []
+      },
+      {
+        "obfName": "a",
+        "desc": "(Ljava/lang/String;FFI)I",
+        "id": "b",
+        "inj": []
+      }
+    ]
+  },
+  {
+    "obfName": "bir",
+    "id": "71963",
+    "fieldMappings": [],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(IIIII)V",
+        "id": "sa",
+        "inj": []
+      },
+      {
+        "obfName": "a",
+        "desc": "(IIII)V",
+        "id": "a",
+        "inj": []
+      },
+      {
+        "obfName": "b",
+        "desc": "(IIII)V",
+        "id": "b",
+        "inj": []
+      },
+      {
+        "obfName": "a",
+        "desc": "(IIIIII)V",
+        "id": "c",
+        "inj": []
+      },
+      {
+        "obfName": "a",
+        "desc": "(Lbip;Ljava/lang/String;III)V",
+        "id": "d",
+        "inj": []
+      },
+      {
+        "obfName": "c",
+        "desc": "(Lbip;Ljava/lang/String;III)V",
+        "id": "e",
+        "inj": []
+      },
+      {
+        "obfName": "b",
+        "desc": "(IIIIII)V",
+        "id": "f",
+        "inj": []
+      }
+    ]
+  },
+  {
+    "obfName": "blk",
+    "id": "-560118425",
+    "fieldMappings": [
+      {
+        "obfName": "l",
+        "desc": "I",
+        "id": "a"
+      },
+      {
+        "obfName": "m",
+        "desc": "I",
+        "id": "b"
+      },
+      {
+        "obfName": "q",
+        "desc": "Lbip;",
+        "id": "c"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "b",
+        "desc": "(Ljava/lang/String;Z)V",
+        "id": "a",
+        "inj": []
+      }
+    ]
+  },
+  {
+    "obfName": "biq",
+    "id": "-836582510",
+    "fieldMappings": [],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(F)V",
+        "id": "a",
+        "inj": [
+          {
+            "id": "-818205047",
+            "pos": 0,
+            "locals": [
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "obfName": "bid",
+    "id": "1754181205",
+    "fieldMappings": [
+      {
+        "obfName": "T",
+        "desc": "Lbhy;",
+        "id": "a"
+      },
+      {
+        "obfName": "U",
+        "desc": "Lbhy;",
+        "id": "b"
+      },
+      {
+        "obfName": "V",
+        "desc": "Lbhy;",
+        "id": "c"
+      },
+      {
+        "obfName": "W",
+        "desc": "Lbhy;",
+        "id": "d"
+      },
+      {
+        "obfName": "X",
+        "desc": "Lbhy;",
+        "id": "e"
+      },
+      {
+        "obfName": "Y",
+        "desc": "Lbhy;",
+        "id": "f"
+      },
+      {
+        "obfName": "ae",
+        "desc": "Lbhy;",
+        "id": "g"
+      },
+      {
+        "obfName": "Z",
+        "desc": "Lbhy;",
+        "id": "h"
+      },
+      {
+        "obfName": "aE",
+        "desc": "F",
+        "id": "i"
+      },
+      {
+        "obfName": "f",
+        "desc": "Z",
+        "id": "j"
+      }
+    ],
+    "methodMappings": []
+  },
+  {
+    "obfName": "bhy",
+    "id": "-2034799802",
+    "fieldMappings": [
+      {
+        "obfName": "e",
+        "desc": "Ljava/lang/String;",
+        "id": "a"
+      },
+      {
+        "obfName": "g",
+        "desc": "Ljava/lang/String;",
+        "id": "b"
+      },
+      {
+        "obfName": "f",
+        "desc": "I",
+        "id": "c"
+      },
+      {
+        "obfName": "h",
+        "desc": "I",
+        "id": "d"
+      },
+      {
+        "obfName": "i",
+        "desc": "Z",
+        "id": "e"
+      },
+      {
+        "obfName": "j",
+        "desc": "I",
+        "id": "f"
+      }
+    ],
+    "methodMappings": []
+  },
+  {
+    "obfName": "aow",
+    "id": "64279661",
+    "fieldMappings": [
+      {
+        "obfName": "d",
+        "desc": "Ljava/lang/String;",
+        "id": "a"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(Laow;)I",
+        "id": "a"
+      },
+      {
+        "obfName": "c",
+        "desc": "(I)Laow;",
+        "id": "b"
+      }
+    ]
+  },
+  {
+    "obfName": "amu",
+    "id": "83766130",
+    "fieldMappings": [
+      {
+        "obfName": "e",
+        "desc": "Ljava/util/List;",
+        "id": "a"
+      },
+      {
+        "obfName": "g",
+        "desc": "Ljava/util/List;",
+        "id": "b"
+      },
+      {
+        "obfName": "i",
+        "desc": "Ljava/util/List;",
+        "id": "c"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "o",
+        "desc": "(Let;)Lawt;",
+        "id": "a"
+      }
+    ]
+  },
+  {
+    "obfName": "et",
+    "id": "-599952729",
+    "fieldMappings": [],
+    "methodMappings": []
+  },
+  {
+    "obfName": "fq",
+    "id": "82528522",
+    "fieldMappings": [
+      {
+        "obfName": "a",
+        "desc": "I",
+        "id": "a"
+      },
+      {
+        "obfName": "b",
+        "desc": "I",
+        "id": "b"
+      },
+      {
+        "obfName": "c",
+        "desc": "I",
+        "id": "c"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "f",
+        "desc": "(DDD)D",
+        "id": "a"
+      }
+    ]
+  },
+  {
+    "obfName": "bhe",
+    "id": "82528517",
+    "fieldMappings": [
+      {
+        "obfName": "b",
+        "desc": "D",
+        "id": "a"
+      },
+      {
+        "obfName": "c",
+        "desc": "D",
+        "id": "b"
+      },
+      {
+        "obfName": "d",
+        "desc": "D",
+        "id": "c"
+      }
+    ],
+    "methodMappings": [
+      {
+        "obfName": "f",
+        "desc": "(Lbhe;)D",
+        "id": "a"
+      },
+      {
+        "obfName": "a",
+        "desc": "(DDD)Lbhe;",
+        "id": "b"
+      },
+      {
+        "obfName": "b",
+        "desc": "(DDD)Lbhe;",
+        "id": "c"
+      },
+      {
+        "obfName": "b",
+        "desc": "()D",
+        "id": "d"
+      },
+      {
+        "obfName": "e",
+        "desc": "(Lbhe;)Lbhe;",
+        "id": "e"
+      },
+      {
+        "obfName": "d",
+        "desc": "(Lbhe;)Lbhe;",
+        "id": "f"
+      }
+    ]
+  },
+  {
+    "obfName": "awt",
+    "id": "940487981",
+    "fieldMappings": [],
+    "methodMappings": [
+      {
+        "obfName": "u",
+        "desc": "()Laow;",
+        "id": "a"
+      }
+    ]
+  },
+  {
+    "obfName": "vp",
+    "id": "486868349",
+    "fieldMappings": [
+      {
+        "obfName": "be",
+        "desc": "F",
+        "id": "a"
+      },
+      {
+        "obfName": "bg",
+        "desc": "F",
+        "id": "b"
+      }
+    ],
+    "methodMappings": []
+  }
+]
