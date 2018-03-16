@@ -52,7 +52,7 @@ UDP-Java is build on the following libraries and frameworks:
 
 ## Contributing
 
-Please read CONTRIBUTING.md for details on how to create proper contributions through pull requests and issues.
+Please read [the contributing guide](CONTRIBUTING.md) for details on how to create proper contributions through pull requests and issues.
 
 ***
 
