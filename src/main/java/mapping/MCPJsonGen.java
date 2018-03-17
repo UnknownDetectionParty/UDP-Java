@@ -14,10 +14,10 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
 
 import mapping.struct.MethodData;
-import party.unknown.detection.hook.json.JsonClassMapping;
-import party.unknown.detection.hook.json.JsonFieldMapping;
-import party.unknown.detection.hook.json.JsonMethodMapping;
-import party.unknown.detection.io.IOUtil;
+import party.detection.unknown.hook.json.JsonClassMapping;
+import party.detection.unknown.hook.json.JsonFieldMapping;
+import party.detection.unknown.hook.json.JsonMethodMapping;
+import party.detection.unknown.io.IOUtil;
 
 /**
  * JSON generator that uses Forge-Gradle's MCP files to generate mappings without needing to access the internet.

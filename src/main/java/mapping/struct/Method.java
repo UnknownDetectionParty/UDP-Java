@@ -3,8 +3,8 @@ package mapping.struct;
 import java.util.ArrayList;
 import java.util.List;
 
-import party.unknown.detection.hook.json.JsonEventInjection;
-import party.unknown.detection.hook.json.JsonMethodMapping;
+import party.detection.unknown.hook.json.JsonEventInjection;
+import party.detection.unknown.hook.json.JsonMethodMapping;
 
 /**
  * Method mapping wrapper.

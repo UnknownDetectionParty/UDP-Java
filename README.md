@@ -10,10 +10,12 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
 
 ### Installation
 
-1. Clone/download the repository 
-2. Change the target version *(Minecraft version to modify, default is 1.12.2)*
-    1. Open the project in your IDE and open `\src\main\java\mapping\MappingGen.java`
-    3. Modify the version string to whichever version you want to target.
+1. Make sure you have the JDK, Minecraft, and [Maven](https://maven.apache.org/install.html) installed.
+2. Clone/download the repository then open it in your IDE
+    1. For eclipse you open the project via `File > Import > Maven > Existing Maven Project`
+3. Change the target version *(Minecraft version to modify, default is 1.12.2)*
+    1. Open `\src\main\java\mapping\MappingGen.java`
+    2. Modify the version string to whichever version you want to target.
         1. Version must either be supported by MCP *(use the MCPOnlineJsonGen)* or by Forge *(use the MCPJsonGen)*
         2. If the version is supported by MCP, just run it. You can find the supported version list [here](http://export.mcpbot.bspk.rs/versions.json).
         3. If the version is supported only by forge, [download the forge MDK](https://files.minecraftforge.net/) and install it as if you were going to make your own mod *(This downloads important files that the tool uses to generate mappings. You can delete the downloaded forge files after running their install script)*
@@ -24,19 +26,30 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
 
 ### Deployment
 
-To compile UDP-Java as an agent simply navigate to the root directory *(should contain `pom.xml`)* and execute the following command in your console: `mvn clean package` *(Assuming you have completed all steps in the installation section)*
+1. Open a console in the root directory *(Wherever you downloaded the project)*
+2. Run the command `mvn clean package`
+    1. This creates `%root%\target\` which contains the compiled jar files.
+3. Open the Minecraft launcher and create a new profile
+    1. Set the java executable to the JDK's `bin.exe`. An example would look like: `C:\Program Files\Java\jdk1.8.0_131\bin\javaw.exe`
+	2. Add these two arguments to the jvm-arguments
+		1. `-noverify`
+		2. `-javaagent:<path/to/UDPMinecraftClient-agent.jar>`
+	    3. Example of my jvm-args: `-client -noverify -javaagent:D:\Java\UDP\JavaCore\target\UDPMinecraftClient-agent.jar -Xmx2G -Xms2G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy`
+	3. Set the game version to match what your agent was built off of.
+4. Save the profile and launch the game
+	1. Plugins are loaded from `.minecraft/udp/plugins/` 
+	2. For developing plugins see the following tutorial: [Plugin Development](PluginDev.md)
 
-This will remove outdated build artifacts and recompile the agent. Maven will place the build files in a new folder under the root called `target`.
+### Logs
 
-To use this in Minecraft, open the game launcher and navigate to the profile editor. Create a new profile and select the version of minecraft you are targeting with UDP-Java. Then under the settings ensure the java executale is a JDK exe. On a windows machine a possible value would look like: `C:\Program Files\Java\jdk1.8.0_131\bin\javaw.exe`
-Then in the JVM arguments insert the following arguments:
+Do not be afraid if you see error blobs in the launcher's console tab. There are some *valid* cases where you may see something like the folloiwng: 
+```
+[2018-03-16 19:40:53] UDP[ERROR]: party.unknown.detection.hook.InvalidHookException: Failed to generate getter for: bih#getSpeed
+    at party.unknown.detection.hook.HookController$1.visitEnd(HookController.java:351)
+```
+This was generated when running the client with 1.12.2. The UDP-Core was compiled with mappings for the `Timer` class *(bih)* but the methods were unable to be found. This will only be an issue if you were to attempt to use those methods. In this case, something like *Kill Aura* would be unaffected. 
 
-* `-noverify`
-* `-javaagent:<path/to/UDPMinecraftClient-agent.jar>`
-
-For reference my entire JVM arguments are as follows: ` -client -noverify -javaagent:D:\Java\UDP\JavaCore\target\UDPMinecraftClient-agent.jar -Xmx2G -Xms2G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy`
-
-Save your profile and launch the game. When the game starts it will search for plugins in the `.minecraft/plugins` folder. For developing plugins see the following tutorial: [Plugin Development](PluginDev.md)
+This is a known problem with mapping generation *(MappingGen tol)* where invalid versioned mappings are included in the output `cfg.json`.
 
 ### Dependencies
 

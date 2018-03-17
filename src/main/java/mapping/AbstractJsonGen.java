@@ -5,9 +5,9 @@ import com.google.gson.GsonBuilder;
 import mapping.struct.Field;
 import mapping.struct.Local;
 import mapping.struct.Method;
-import party.unknown.detection.event.impl.external.*;
-import party.unknown.detection.hook.impl.*;
-import party.unknown.detection.hook.json.*;
+import party.detection.unknown.event.impl.external.*;
+import party.detection.unknown.hook.impl.*;
+import party.detection.unknown.hook.json.*;
 
 import java.lang.reflect.Modifier;
 

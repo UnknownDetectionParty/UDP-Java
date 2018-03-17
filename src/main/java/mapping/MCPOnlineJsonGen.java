@@ -22,7 +22,7 @@ import com.google.gson.Gson;
 import mapping.struct.GameVersionCFG;
 import mapping.struct.GameVersions;
 import mapping.struct.MethodData;
-import party.unknown.detection.hook.json.JsonClassMapping;
+import party.detection.unknown.hook.json.JsonClassMapping;
 
 /**
  * JSON generator that uses the MCP export-bot and Mojang API to generate mappings online.

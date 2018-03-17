@@ -15,16 +15,16 @@ Anything as long as you have the mappings for it. You can find the current suppo
 In `Entity.java`, getting/setting fall distance
 ```java
     @Getter("a")
-	float getFallDistance();
-	
-	@Setter("a")
-	void setFallDistance(float fallDistance);
+    float getFallDistance();
+    
+    @Setter("a")
+    void setFallDistance(float fallDistance);
 ```
 
 In `Entity.java` calling the `getPosition()` method that converts the player's `x`, `y`, and `z` into a `BlockPos` 
 ```java
-	@MethodProxy("a")
-	BlockPos getPosition();
+    @MethodProxy("a")
+    BlockPos getPosition();
 ```
 
 To register these mappings to the API we need to update our mappings in `cfg.json`. We can auto-generate this file by modifying `src/mapping/AbstractJsonGen`. There is a public method `configure()` that lists all the mappings. 
@@ -33,12 +33,12 @@ This is what our Entity class would look like if we wanted to add only those met
 
 ```java
 cls(Entity.class, "net/minecraft/entity/Entity", 
-	new Field() {{
-		add("a", "fallDistance");
-	}}.array(), 
-	new Method() {{
-		add("a", "getPosition", "()Lnet/minecraft/util/math/BlockPos;");
-	}}.array()),
+    new Field() {{
+        add("a", "fallDistance");
+    }}.array(), 
+    new Method() {{
+        add("a", "getPosition", "()Lnet/minecraft/util/math/BlockPos;");
+    }}.array()),
 // more mapping definitions
 ```
 
@@ -59,12 +59,12 @@ All of your plugins will generally look like this:
 package YourPackageHere;
 
 import org.lwjgl.input.Keyboard;
-import party.unknown.detection.io.config.Setting;
-import party.unknown.detection.event.EventListener;
-import party.unknown.detection.event.impl.external.*;
-import party.unknown.detection.hook.impl.*;
-import party.unknown.detection.plugin.*;
-import party.unknown.detection.plugin.annotations.*;
+import party.detection.unknown.io.config.Setting;
+import party.detection.unknown.event.EventListener;
+import party.detection.unknown.event.impl.external.*;
+import party.detection.unknown.hook.impl.*;
+import party.detection.unknown.plugin.*;
+import party.detection.unknown.plugin.annotations.*;
 
 /**
  * @author YourNameHere
@@ -91,3 +91,33 @@ public class MyPlugin extends KeyPlugin.Toggle {
 This is a standard toggle mod. There are other kinds of mods you can create but those will typically go unused *(The cool ones aren't fully implemented so you're limited to the keybind ones)*. If you wanted you plugin to be on *while* a key is pressed instead of toggling change `KeyPlugin.Toggle` to `KeyPlugin.Press`.
 
 You can check out the [examples directory](examples/) for more example plugins. They come compiled if you want to test them out.
+
+### Creating custom events
+
+Adding your own events is just an additional step to the mapping process. Lets look at an example, Minecraft where we add a KeyPress event.
+
+```java
+cls(Minecraft.class, "net/minecraft/client/Minecraft", 
+    new Field() {{
+        // removed for brevity
+    }}.array(), 
+    new Method() {{
+    	add("sb", "dispatchKeypresses", "()V", 
+    		new Local() {{
+    			add(KeyDispatchEvent.class, 0);
+    		}}.array());
+    }}.array()), 
+```
+
+Now in this case we do not actually have `void dispatchKeypresses()` in our static-handler for Minecraft *(SHMinecraft)*. Nor is it in the normal mapping interface *(Minecraft)*. This is because we don't need to actually call it, it just needs to be in our `cfg.json`. So, we know the name of the method, we know the descriptor of the method. To hook a local variable in the method we simply add:
+```java
+new Local() {{
+	add(OurEventClass.class, VariableIndex);
+}}.array()
+```
+And with out key example where the first variable *(zero-index)* is the key-value:
+```java
+new Local() {{
+	add(KeyDispatchEvent.class, 0);
+}}.array()
+```

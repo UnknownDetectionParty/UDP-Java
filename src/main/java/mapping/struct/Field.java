@@ -3,7 +3,7 @@ package mapping.struct;
 import java.util.ArrayList;
 import java.util.List;
 
-import party.unknown.detection.hook.json.JsonFieldMapping;
+import party.detection.unknown.hook.json.JsonFieldMapping;
 
 /**
  * Field mapping wrapper.
