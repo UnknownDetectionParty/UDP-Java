@@ -1,5 +1,6 @@
 package party.detection.unknown.event;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Comparator;
 import java.util.Map;
@@ -86,8 +87,7 @@ public enum EventManager {
 	public void invoke(Event event) {
 		try {
 			getHandler(event.getClass()).invoke(event);
-		} catch (Exception e) {
-		}
+		} catch (Exception e) {}
 	}
 
 	/**
@@ -325,6 +325,9 @@ public enum EventManager {
 			// extends RuntimeException?
 			try {
 				method.invoke(instance, event);
+			} catch (InvocationTargetException e) {
+				Logger.error(e.getCause(),
+						"Could not invoke method: " + instance.getClass().getName() + "#" + method.getName());
 			} catch (Exception e) {
 				Logger.error(e, "Could not invoke method: " + instance.getClass().getName() + "#" + method.getName());
 			}
