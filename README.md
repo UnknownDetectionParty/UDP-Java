@@ -38,7 +38,7 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
 	3. Set the game version to match what your agent was built off of.
 4. Save the profile and launch the game
 	1. Plugins are loaded from `.minecraft/udp/plugins/` 
-	2. For developing plugins see the following tutorial: [Plugin Development](PluginDev.md)
+	2. For developing plugins see the following tutorial: [Plugin Development](docs/PluginDev.md)
 
 ### Logs
 
