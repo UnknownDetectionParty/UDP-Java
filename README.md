@@ -77,3 +77,11 @@ Please read [the contributing guide](CONTRIBUTING.md) for details on how to crea
 * GenericSkid
     * Plugin API
     * Event system
+	
+***
+
+## Further reading:
+
+* [Package overview](docs/Overview.md)
+* [Plugin development](docs/PluginDev.md)
+* [What is injection?](docs/injection1.md)
