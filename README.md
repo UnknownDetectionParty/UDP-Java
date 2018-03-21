@@ -84,4 +84,5 @@ Please read [the contributing guide](CONTRIBUTING.md) for details on how to crea
 
 * [Package overview](docs/Overview.md)
 * [Plugin development](docs/PluginDev.md)
+* [How to make mappings](docs/Mapping.md)
 * [What is injection?](docs/Injection1.md)
