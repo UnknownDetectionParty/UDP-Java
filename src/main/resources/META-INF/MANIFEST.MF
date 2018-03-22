@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Premain-Class: party.unknown.detection.Agent
+Premain-Class: party.detection.unknown.Agent
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
