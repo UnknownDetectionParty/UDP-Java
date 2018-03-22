@@ -49,7 +49,7 @@ Do not be afraid if you see error blobs in the launcher's console tab. There are
 ```
 This was generated when running the client with 1.12.2. The UDP-Core was compiled with mappings for the `Timer` class *(bih)* but the methods were unable to be found. This will only be an issue if you were to attempt to use those methods. In this case, something like *Kill Aura* would be unaffected. 
 
-This is a known problem with mapping generation *(MappingGen tol)* where invalid versioned mappings are included in the output `cfg.json`.
+This is a known problem with mapping generation *(MappingGen tool)* where invalid versioned mappings are included in the output `cfg.json`.
 
 ### Dependencies
 

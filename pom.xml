@@ -103,11 +103,11 @@
                                 <filter>
                                     <artifact>${project.groupId}:${project.artifactId}</artifact>
                                     <includes>
-                                        <include>party/unknown/detection/plugin/**</include>
-										 <include>party/unknown/detection/event/impl/external/**</include>
+                                        <include>party/detection/unknown/plugin/**</include>
+										 <include>party/detection/unknown/event/impl/external/**</include>
                                     </includes>
                                     <excludes>
-                                        <exclude>party/unknown/detection/plugin/internal/**</exclude>
+                                        <exclude>party/detection/unknown/plugin/internal/**</exclude>
                                     </excludes>
                                 </filter>
                             </filters>
@@ -131,7 +131,7 @@
                                 <filter>
                                     <artifact>${project.groupId}:${project.artifactId}</artifact>
                                     <includes>
-                                        <include>party/unknown/detection/hook/impl/**</include>
+                                        <include>party/detection/unknown/hook/impl/**</include>
                                     </includes>
                                 </filter>
                             </filters>
