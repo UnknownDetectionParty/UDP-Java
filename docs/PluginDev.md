@@ -48,7 +48,7 @@ Once your changes have been added run the mapping tool. You should know how to u
 
 This is kinda shitty but what I did was make a new project in my workspace. I then had the project import `Core` *(The client API)* as a dependency and thus I agained all the imports needed for development. 
 
-To compile I exported my plugin  as a jar and deleted the extra uneeded files. 
+**Compiling**: Once I've set-up the work space I convert it to a maven project and use `mvn package` to put all my plugin classes in one jar. You can then place the compiled jar into `.minecraft/udp/plugins/`
 
 ### Example plugins
 
@@ -70,13 +70,13 @@ import party.detection.unknown.plugin.annotations.*;
  * @author YourNameHere
  * @since 3/16/2018
  */
-@PluginGroup("MyPluginGroup")
+@PluginGroup("MyPluginGroup") // Only one plugin in your workspace needs to have this annotation
 @Plugin(
 	name = "My Plugin Name",								
 	description = "My description of the plugin.",	
 	author = "YourNameHere",
 	// Use * for wildcard support
-	// For example, this supports any version starting with '1.12'
+	// For example, "1.12*" supports any version starting with '1.12'
 	versions = {"1.12*", "1.7.9", "more versions"} 
 )
 public class MyPlugin extends KeyPlugin.Toggle {
