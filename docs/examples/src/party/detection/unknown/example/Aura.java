@@ -49,7 +49,7 @@ public class Aura extends KeyPlugin.Toggle {
 		double y = player.getPosY();
 		double z = player.getPosZ();
 		for (Entity entity : world.getLoadedEntityList()) {
-			if (entity.isDead()) {
+			if (entity.isDead() || entity.equals(player)) {
 				continue;
 			}
 			if (entity instanceof EntityLivingBase && entity.getPosition().distanceTo(x, y, z) < (range*range) && entity.getHurtResistanceTime() <= resist) {
