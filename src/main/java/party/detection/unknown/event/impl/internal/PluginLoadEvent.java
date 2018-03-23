@@ -1,28 +1,28 @@
 package party.detection.unknown.event.impl.internal;
 
 import party.detection.unknown.event.Event;
-import party.detection.unknown.plugin.PluginData;
+import party.detection.unknown.plugin.PluginPack;
 
 /**
- * Called when a plugin is loaded.
+ * Called when a plugin-pack is loaded.
  * 
  * @author GenericSkid
  * @since 8/19/2017
  */
 public class PluginLoadEvent extends Event {
-	private final PluginData data;
+	private final PluginPack pack;
 
-	public PluginLoadEvent(PluginData data) {
-		this.data = data;
+	public PluginLoadEvent(PluginPack data) {
+		this.pack = data;
 	}
 
 	/**
-	 * The plugin data of the plugin being loaded.
+	 * The plugin-pack of the plugins being loaded.
 	 * 
 	 * @return
 	 */
-	public PluginData getData() {
-		return data;
+	public PluginPack getPack() {
+		return pack;
 	}
 
 }

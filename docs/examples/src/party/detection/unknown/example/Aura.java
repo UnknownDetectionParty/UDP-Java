@@ -12,13 +12,24 @@ import party.detection.unknown.hook.impl.Wrapper;
 import party.detection.unknown.io.config.Setting;
 import party.detection.unknown.plugin.KeyPlugin;
 import party.detection.unknown.plugin.annotations.Plugin;
+import party.detection.unknown.plugin.annotations.PluginGroup;
 
 /**
  * @author GenericSkid
  * @since 2/16/2017
  */
-@Plugin(id = "KillArea", name = "KillArea", description = "Kill fags.", author = "GenericSkid", versions = { "1.8",
-		"1.9", "1.10", "1.11", "1.12","1.12.2", "1.12.2-OptiFine_HD_U_C9" })
+@PluginGroup("examples")
+@Plugin(
+		name = "KillArea", 
+		description = "Kill fags.", 
+		author = "GenericSkid", 
+		versions = { 
+			"1.8*",
+			"1.9*",
+			"1.10*", 
+			"1.11*", 
+			"1.12*" 
+		})
 public class Aura extends KeyPlugin.Toggle {
 	@Setting(name = "Maximum range")
 	private int range = 4;

@@ -28,9 +28,10 @@ public enum Keys {
 			return;
 		}
 		int key = e.getKey();
-		PluginManager.INSTANCE.getPlugins().stream()
-			.filter(data -> data.getInstance() instanceof KeyPlugin)
-			.map(data -> (KeyPlugin) data.getInstance())
-			.forEach(plugin -> plugin.updateKey(key));
+		PluginManager.INSTANCE.getPlugins().stream().forEach(data -> {
+			data.getClasses().stream().filter(clazz -> clazz.getInstance() instanceof KeyPlugin)
+			.map(clazz -> (KeyPlugin) clazz.getInstance())
+					.forEach(plugin -> plugin.updateKey(key));
+		});
 	}
 }

@@ -2,16 +2,24 @@ package party.detection.unknown.plugin.internal;
 
 import org.objectweb.asm.*;
 
-import party.detection.unknown.plugin.PluginData;
+import party.detection.unknown.plugin.PluginPack.PluginClass;
 import party.detection.unknown.plugin.annotations.Plugin;
+import party.detection.unknown.plugin.annotations.PluginGroup;
 
 public class AnnoVisitorData extends ClassVisitor implements Opcodes {
 
-	private PluginData data;
+	private final PluginClass data;
 
-	public AnnoVisitorData(PluginData data) {
+	public AnnoVisitorData(PluginClass data) {
 		super(ASM5);
 		this.data = data;
+	}
+	
+	@Override
+	public void visit(int version, int access, String name, String signature,
+            String superName, String[] interfaces) {
+		data.setClassName(name.replace("/", "."));
+		super.visit(version, access, name, signature, superName, interfaces);
 	}
 
 	@Override
@@ -23,9 +31,6 @@ public class AnnoVisitorData extends ClassVisitor implements Opcodes {
 					// Set plugin data from annotation data
 					String s = (String) value;
 					switch (name) {
-					case "id":
-						data.setUniqueID(s);
-						break;
 					case "name":
 						data.setName(s);
 						break;
@@ -50,6 +55,16 @@ public class AnnoVisitorData extends ClassVisitor implements Opcodes {
 						};
 					}
 					return super.visitArray(name);
+				}
+			};
+		} else if (desc.equals(Type.getDescriptor(PluginGroup.class))) {
+			return new AnnotationVisitor(api, super.visitAnnotation(desc, visible)) {
+				@Override
+				public void visit(String name, Object value) {
+					if (name.equals("value")) {
+						data.setUpstreamGroup((String) value);
+					}
+					super.visit(name, value);
 				}
 			};
 		}

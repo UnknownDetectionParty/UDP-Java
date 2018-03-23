@@ -8,11 +8,10 @@ import party.detection.unknown.plugin.KeyPlugin;
 import party.detection.unknown.plugin.annotations.*;
 
 @Plugin(
-		id = "RunHookTest",
 		name = "HookTest",								
 		description = "Hook shit.",	
 		author = "GenericSkid",
-		versions = {"1.7.10", "1.8.8", "1.12"}
+		versions = {"1.7.10", "1.8.8", "1.8.9", "1.12"}
 )
 public class HookTest extends KeyPlugin.Toggle {
 	// Inject call to runhook, will print mc class instance on game startup for the given versions

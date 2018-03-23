@@ -14,11 +14,16 @@ import party.detection.unknown.plugin.annotations.*;
  * @since 11/21/2017
  */
 @Plugin(
-	id = "SkidBreak",
 	name = "Fastmine",								
 	description = "Dig faster.",	
 	author = "GenericSkid",
-	versions = {"1.12.2"}
+	versions = { 
+			"1.8*",
+			"1.9*",
+			"1.10*", 
+			"1.11*", 
+			"1.12*" 
+	}
 )
 public class Fastmine extends KeyPlugin.Toggle {
 	@Setting(name = "Begin progress")

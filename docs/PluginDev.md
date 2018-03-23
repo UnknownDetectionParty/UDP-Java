@@ -70,12 +70,14 @@ import party.detection.unknown.plugin.annotations.*;
  * @author YourNameHere
  * @since 3/16/2018
  */
+@PluginGroup("MyPluginGroup")
 @Plugin(
-	id = "MyPluginID",
 	name = "My Plugin Name",								
 	description = "My description of the plugin.",	
 	author = "YourNameHere",
-	versions = {"1.12", "1.12.2", "more versions"}
+	// Use * for wildcard support
+	// For example, this supports any version starting with '1.12'
+	versions = {"1.12*", "1.7.9", "more versions"} 
 )
 public class MyPlugin extends KeyPlugin.Toggle {
 	public MyPlugin(){

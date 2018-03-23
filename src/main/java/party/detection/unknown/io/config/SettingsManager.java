@@ -19,7 +19,7 @@ import com.google.gson.JsonParser;
 import party.detection.unknown.io.IOManager;
 import party.detection.unknown.io.IOUtil;
 import party.detection.unknown.plugin.PluginBase;
-import party.detection.unknown.plugin.PluginData;
+import party.detection.unknown.plugin.PluginPack;
 import party.detection.unknown.plugin.PluginManager;
 import party.detection.unknown.plugin.internal.exceptions.NoSuchPlugin;
 
@@ -36,7 +36,7 @@ public enum SettingsManager {
 	private final Map<PluginBase, Settings> settings = new HashMap<>();
 
 	public Settings create(PluginBase owner) {
-		PluginData data = PluginManager.INSTANCE.getPlugin(owner.getClass());
+		PluginPack data = PluginManager.INSTANCE.getPlugin(owner.getClass());
 		if (data != null) {
 			Settings s = new Settings(owner);
 			settings.put(owner, s);
@@ -109,10 +109,10 @@ public enum SettingsManager {
 	}
 
 	private static File getConfig(Settings settings) {
-		return new File(IOManager.getPluginDirectory(classFromSettings(settings)), "settings.json");
+		return new File(IOManager.getPluginDirectory(packFromSettings(settings)), "settings.json");
 	}
 
-	private static PluginData classFromSettings(Settings settings) {
+	private static PluginPack packFromSettings(Settings settings) {
 		return PluginManager.INSTANCE.getPlugin(settings.getOwner().getClass());
 	}
 

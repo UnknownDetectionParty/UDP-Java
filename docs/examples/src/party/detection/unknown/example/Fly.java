@@ -16,11 +16,16 @@ import party.detection.unknown.plugin.annotations.Plugin;
  * @since 8/14/2017
  */
 @Plugin(
-	id = "SkidFly",
 	name = "Fly",
 	author = "GenericSkid",
 	description = "Enable client-side flying.", 
-	versions = { "1.8", "1.9", "1.10", "1.11", "1.12","1.12.2", "1.12.2-OptiFine_HD_U_C9" }
+	versions = { 
+		"1.8*",
+		"1.9*",
+		"1.10*", 
+		"1.11*", 
+		"1.12*" 
+	}
 )
 public class Fly extends KeyPlugin.Toggle {
 	@Setting(name = "Base speed")

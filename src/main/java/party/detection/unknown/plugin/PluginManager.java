@@ -2,8 +2,6 @@ package party.detection.unknown.plugin;
 
 import java.util.*;
 
-import org.pmw.tinylog.Logger;
-
 import party.detection.unknown.event.EventManager;
 import party.detection.unknown.event.impl.internal.PluginUnloadEvent;
 import party.detection.unknown.plugin.internal.PluginLoader;
@@ -20,25 +18,41 @@ public enum PluginManager {
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 			@Override
 			public void run() {
-				plugins.values().forEach(pd -> pd.getInstance().onUnload());
+				packs.values().forEach(pd -> pd.getClasses().forEach(pc -> pc.getInstance().onUnload()));
 			}
 		});
 	}
 
 	/**
-	 * Map of plugin class names to plugins.
+	 * Map of plugin group ids to plugin-packs.
 	 */
-	private final Map<String, PluginData> plugins = new HashMap<>();
+	private final Map<String, PluginPack> packs = new HashMap<>();
+	/**
+	 * Map of plugin-instance names to their plugin-packs.
+	 */
+	private final Map<String, PluginPack> classLookup = new HashMap<>();
 
 	/**
-	 * Registers a plugin in the {@linkplain #plugins plugin map}.
+	 * Registers a plugin-pack in the {@linkplain #packs plugin map}.
 	 * 
 	 * @param data
-	 *            Plugin to register.
+	 *            Plugin-pack to register.
 	 */
-	public void register(PluginData data) {
-		Logger.info("Register: " + data.getAuthor() + "'s " + data.getName() + " (" + data.getJar().getName() + ")");
-		plugins.put(data.getPluginClass().getName(), data);
+	public void register(PluginPack data) {
+		data.getClasses().forEach(pc -> classLookup.put(pc.getClassName(), data));
+		packs.put(data.getUniqueID(), data);
+	}
+
+	/**
+	 * Registers a plugin class to its plugin-pack.
+	 * 
+	 * @param data
+	 *            Plugin pack.
+	 * @param pc
+	 *            Plugin class.
+	 */
+	public void register(PluginPack data, Class<?> pc) {
+		classLookup.put(pc.getName(), data);
 	}
 
 	/**
@@ -48,25 +62,27 @@ public enum PluginManager {
 	 * calls to event handling. If you encounter this, open a issue on github and
 	 * pray one of us is still around.
 	 * 
-	 * @param data
+	 * @param pack
 	 *            Plugin container.
 	 * @throws LoadException
 	 *             Thrown if the plugin failed to load.
 	 */
-	public static void reload(PluginData data) throws LoadException {
-		PluginBase pluginBase = data.getInstance();
-		pluginBase.onUnload();
-		EventManager.INSTANCE.invoke(new PluginUnloadEvent(data));
-		EventManager.INSTANCE.destroyCache(pluginBase);
+	public static void reload(PluginPack pack) throws LoadException {
+		pack.getClasses().forEach(pc -> {
+			PluginBase pluginBase = pc.getInstance();
+			pluginBase.onUnload();
+			EventManager.INSTANCE.destroyCache(pc);
+		});
+		EventManager.INSTANCE.invoke(new PluginUnloadEvent(pack));
 		// Reload
-		PluginLoader.load(data.getJar());
+		PluginLoader.load(pack.getJar());
 	}
 
 	/**
 	 * @return Collection of plugin containers.
 	 */
-	public Collection<PluginData> getPlugins() {
-		return plugins.values();
+	public Collection<PluginPack> getPlugins() {
+		return packs.values();
 	}
 
 	/**
@@ -74,8 +90,8 @@ public enum PluginManager {
 	 *            Plugin class.
 	 * @return Plugin container for the given plugin class.
 	 */
-	public PluginData getPlugin(Class<?> clazz) {
-		return plugins.get(clazz.getName());
+	public PluginPack getPlugin(Class<?> clazz) {
+		return classLookup.get(clazz.getName());
 	}
 
 }

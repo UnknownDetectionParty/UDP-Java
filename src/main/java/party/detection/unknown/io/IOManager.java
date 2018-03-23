@@ -2,7 +2,7 @@ package party.detection.unknown.io;
 
 import java.io.File;
 
-import party.detection.unknown.plugin.PluginData;
+import party.detection.unknown.plugin.PluginPack;
 
 /**
  * IO functions key to client functions. 
@@ -34,11 +34,11 @@ public class IOManager {
 
 	/**
 	 * @param plugin
-	 *            The plugin.
-	 * @return Config folder for given plugin.
+	 *            The plugin-pack.
+	 * @return Config folder for given plugin-pack.
 	 */
-	public static File getPluginDirectory(PluginData plugin) {
-		return new File(getPluginsDirectory(), plugin.getAuthor() + File.separator + plugin.getName());
+	public static File getPluginDirectory(PluginPack pack) {
+		return new File(getPluginsDirectory(), pack.getUniqueID());
 	}
 
 	/**
