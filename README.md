@@ -30,12 +30,11 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
 2. Run the command `mvn clean package`
     1. This creates `%root%\target\` which contains the compiled jar files.
 3. Open the Minecraft launcher and create a new profile
-    1. Set the java executable to the JDK's `bin.exe`. An example would look like: `C:\Program Files\Java\jdk1.8.0_131\bin\javaw.exe`
-	2. Add these two arguments to the jvm-arguments
+	1. Add these two arguments to the jvm-arguments
 		1. `-noverify`
 		2. `-javaagent:<path/to/UDPMinecraftClient-agent.jar>`
 	    3. Example of my jvm-args: `-client -noverify -javaagent:D:\Java\UDP\JavaCore\target\UDPMinecraftClient-agent.jar -Xmx2G -Xms2G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy`
-	3. Set the game version to match what your agent was built off of.
+	2. Set the game version to match what your agent was built off of.
 4. Save the profile and launch the game
 	1. Plugins are loaded from `.minecraft/udp/plugins/` 
 	2. For developing plugins see the following tutorial: [Plugin Development](docs/PluginDev.md)
