@@ -104,4 +104,5 @@ Please read [the contributing guide](CONTRIBUTING.md) for details on how to crea
 * [Package overview](docs/Overview.md)
 * [Plugin development](docs/PluginDev.md)
 * [How to make mappings](docs/Mapping.md)
+* [Video tutorials _(Install, setting up, usage)_](https://www.youtube.com/watch?v=QADF418iGCA&index=1&list=PL_fx_nDEdvuBFgRA1SpQK5WnnLFZSwZ5D&t=0s)
 * [What is injection?](docs/Injection1.md)
