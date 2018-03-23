@@ -31,7 +31,7 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
     1. This creates `%root%\target\` which contains the compiled jar files.
 3. Open the Minecraft launcher and create a new profile
 	1. Add these two arguments to the jvm-arguments
-		1. `-noverify`
+		1. `-noverify` _(noverify not needed, but suggested if you plan on expanding the bytecode manipulation capabilities of the api)_
 		2. `-javaagent:<path/to/UDPMinecraftClient-agent.jar>`
 	    3. Example of my jvm-args: `-client -noverify -javaagent:D:\Java\UDP\JavaCore\target\UDPMinecraftClient-agent.jar -Xmx2G -Xms2G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy`
 	2. Set the game version to match what your agent was built off of.
