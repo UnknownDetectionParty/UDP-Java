@@ -40,16 +40,36 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
 	1. Plugins are loaded from `.minecraft/udp/plugins/` 
 	2. For developing plugins see the following tutorial: [Plugin Development](docs/PluginDev.md)
 
-### Logs
+### Testing & Debugging
 
-Do not be afraid if you see error blobs in the launcher's console tab. There are some *valid* cases where you may see something like the folloiwng: 
-```
-[2018-03-16 19:40:53] UDP[ERROR]: party.unknown.detection.hook.InvalidHookException: Failed to generate getter for: bih#getSpeed
-    at party.unknown.detection.hook.HookController$1.visitEnd(HookController.java:351)
-```
-This was generated when running the client with 1.12.2. The UDP-Core was compiled with mappings for the `Timer` class *(bih)* but the methods were unable to be found. This will only be an issue if you were to attempt to use those methods. In this case, something like *Kill Aura* would be unaffected. 
+Please make sure that your launcher profile is set to keep the logging window open. This way you can easily see the UDP log contents on the fly. The log is also saved to `.minecraft/udp/log.txt` when the game exits.
 
-This is a known problem with mapping generation *(MappingGen tool)* where invalid versioned mappings are included in the output `cfg.json`.
+**Examples**:
+
+```
+// loading
+UDP[INFO]: Loading injection config
+UDP[INFO]: Loading plugins
+
+// plugin failed to load because of the @plugin annotation not supporting the given version
+UDP[ERROR]: Removed 'HookTest' - Does not support game version '1.12.2-OptiFine_HD_U_C9'
+
+// these plugins all loaded correctly
+UDP[INFO]: Loaded 'examples'-'Fastmine'
+UDP[INFO]: Loaded 'examples'-'Fly'
+UDP[INFO]: Loaded 'examples'-'KillArea'
+UDP[INFO]: Loaded 'examples'-'Hud'
+
+// keybinding successfully loaded
+UDP[INFO]: Registering binds
+
+// The facade was loaded successfully
+UDP[INFO]: Injecting facade 'Minecraft' over 'bib'
+
+// The facade had a method with a mapping annotation, but it was not found in the `cfg.json`.
+// This is fine if your facade contains methods for multiple versions of the game (like Timer).
+UDP[DEBUG]: Missing getter for: bih#getSpeed
+```
 
 ### Dependencies
 

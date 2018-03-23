@@ -16,13 +16,11 @@ public class MappingGen {
 				ver = args[0];
 			}
 			// generator type
-			AbstractJsonGen gen = null;
+			AbstractJsonGen gen = new MCPJsonGen(ver, false);;
 			if (args.length > 1) {
 				String type = args[1];
 				if (type.equals("mcp") || type.equals("online")) {
 					gen = new MCPOnlineJsonGen(ver, false, "snapshot");
-				} else {
-					gen = new MCPJsonGen(ver, false);
 				}
 			}
 			// print version mapping via generator

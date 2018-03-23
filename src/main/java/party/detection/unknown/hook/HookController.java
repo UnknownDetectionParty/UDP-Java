@@ -203,8 +203,7 @@ public enum HookController {
 					mv.visitMaxs(3, 3);
 					mv.visitEnd();
 				} else {
-					Logger.error(new InvalidHookException(
-							"Failed to generate getter for: " + internClsName + "#" + method.getName()));
+					Logger.debug("Missing getter for: " + internClsName + "#" + method.getName());
 				}
 				continue;
 			}
@@ -229,8 +228,7 @@ public enum HookController {
 					mv.visitMaxs(3, 3);
 					mv.visitEnd();
 				} else {
-					Logger.error(new InvalidHookException(
-							"Failed to generate setter for: " + internClsName + "#" + method.getName()));
+					Logger.debug("Missing setter for: " + internClsName + "#" + method.getName());
 				}
 				continue;
 			}
@@ -264,8 +262,7 @@ public enum HookController {
 					mv.visitMaxs((3 + argTypes.length) << 1, (3 + argTypes.length) << 1);
 					mv.visitEnd();
 				} else {
-					Logger.error(new InvalidHookException(
-							"Failed to generate static proxy caller for: " + internClsName + "#" + method.getName()));
+					Logger.debug("Missing static proxy caller for: " + internClsName + "#" + method.getName());
 				}
 			}
 		}
@@ -347,8 +344,7 @@ public enum HookController {
 							mv.visitMaxs(3, 3);
 							mv.visitEnd();
 						} else {
-							Logger.error(new InvalidHookException(
-									"Failed to generate getter for: " + internClsName + "#" + method.getName()));
+							Logger.debug("Missing getter for: " + internClsName + "#" + method.getName());
 						}
 						continue;
 					}
@@ -376,8 +372,7 @@ public enum HookController {
 							mv.visitMaxs(3, 3);
 							mv.visitEnd();
 						} else {
-							Logger.error(new InvalidHookException(
-									"Failed to generate setter for: " + internClsName + "#" + method.getName()));
+							Logger.debug("Missing setter for: " + internClsName + "#" + method.getName());
 						}
 						continue;
 					}
@@ -416,8 +411,7 @@ public enum HookController {
 							mv.visitMaxs((3 + argTypes.length) << 1, (3 + argTypes.length) << 1);
 							mv.visitEnd();
 						} else {
-							Logger.error(new InvalidHookException(
-									"Failed to generate method proxy for: " + internClsName + "#" + method.getName()));
+							Logger.debug("Missing method proxy for: " + internClsName + "#" + method.getName());
 						}
 					}
 				}
@@ -585,14 +579,10 @@ public enum HookController {
 			}
 			// TODO: Ignore methods that are not supported by the loaded version json.
 			/*
-			// Seems like it should work but doesn't.
-			String id = getID(m);
-			MemberData md = getMethodByName(internName, id);
-			if (md == null) {
-				Logger.info("rem: " + m);
-				proxyMethodList.remove(i);
-			}
-			*/
+			 * // Seems like it should work but doesn't. String id = getID(m); MemberData md
+			 * = getMethodByName(internName, id); if (md == null) { Logger.info("rem: " +
+			 * m); proxyMethodList.remove(i); }
+			 */
 		}
 		return proxyMethodList.toArray(new Method[0]);
 	}
