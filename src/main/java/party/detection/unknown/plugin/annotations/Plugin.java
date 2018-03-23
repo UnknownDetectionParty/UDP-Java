@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * @author bloo
  * @since 8/14/2017
  */
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface Plugin {
 	String name();

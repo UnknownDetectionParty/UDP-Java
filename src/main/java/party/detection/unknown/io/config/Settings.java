@@ -102,6 +102,13 @@ public class Settings {
 	}
 
 	/**
+	 * @return Plugin name.
+	 */
+	public String getName() {
+		return owner.getAnnotation().name();
+	}
+
+	/**
 	 * Load fields from the setting owner into the {@link #values}.
 	 */
 	private final void populate() {

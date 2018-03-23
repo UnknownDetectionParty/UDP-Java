@@ -32,6 +32,6 @@ public abstract class PluginBase {
 	 * @return '@Plugin' annotation on the current class.
 	 */
 	public Plugin getAnnotation(){
-		return this.getClass().getDeclaredAnnotation(Plugin.class);
+		return getClass().getDeclaredAnnotation(Plugin.class);
 	}
 }

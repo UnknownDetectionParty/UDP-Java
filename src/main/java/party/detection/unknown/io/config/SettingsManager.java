@@ -109,7 +109,7 @@ public enum SettingsManager {
 	}
 
 	private static File getConfig(Settings settings) {
-		return new File(IOManager.getPluginDirectory(packFromSettings(settings)), "settings.json");
+		return new File(IOManager.getPluginDirectory(packFromSettings(settings)),  settings.getName() + ".json");
 	}
 
 	private static PluginPack packFromSettings(Settings settings) {
