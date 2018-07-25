@@ -2,8 +2,6 @@ package party.detection.unknown.util;
 
 import java.util.Arrays;
 
-import org.lwjgl.input.Keyboard;
-
 /**
  * @author GenericSkid
  * @since 12/25/2017

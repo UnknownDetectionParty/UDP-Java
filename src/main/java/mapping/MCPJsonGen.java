@@ -144,7 +144,8 @@ public class MCPJsonGen extends AbstractJsonGen {
 				String clsBit = parts[2].substring(0, splitPoint);
 				String srgField = parts[2].substring(splitPoint);
 				String replace = fieldSrgToMCP.get(srgField);
-				fieldMCPToObf.put(clsBit + (replace != null ? replace : srgField), parts[1]);
+				String fkey = clsBit + (replace != null ? replace : srgField);
+				fieldMCPToObf.put(fkey, parts[1]);
 				break;
 			}
 			case "MD:": {
@@ -222,6 +223,7 @@ public class MCPJsonGen extends AbstractJsonGen {
 			if (obfClassName != null)
 				classMapping.setObfName(obfClassName);
 			for (JsonFieldMapping fieldMapping : classMapping.getFieldMappings()) {
+				
 				for (String mcpAlias : fieldMapping.getMcpAliases()) {
 					String obfFieldName = fieldMCPToObf.get(origName + '/' + mcpAlias);
 					if (obfFieldName != null) {

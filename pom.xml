@@ -41,13 +41,21 @@
 			<version>1.7.10</version>
 		</dependency>
 		-->
-		<!-- https://mvnrepository.com/artifact/org.lwjgl.lwjgl/lwjgl -->
-        <dependency>
-            <groupId>org.lwjgl.lwjgl</groupId>
-            <artifactId>lwjgl</artifactId>
-            <version>2.9.3</version>
-            <scope>compile</scope>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.lwjgl/lwjgl -->
+		<dependency>
+			<groupId>org.lwjgl</groupId>
+			<artifactId>lwjgl</artifactId>
+			<version>3.1.6</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.lwjgl/lwjgl-glfw -->
+		<dependency>
+			<groupId>org.lwjgl</groupId>
+			<artifactId>lwjgl-glfw</artifactId>
+			<version>3.1.6</version>
+			<scope>compile</scope>
+		</dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -62,7 +70,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>3.1.1</version>
                 <executions>
                     <execution>
                         <id>shade</id>

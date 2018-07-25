@@ -27,10 +27,10 @@ public enum JsonMappingHandler {
 	JsonMappingHandler() {
 		// Paste new classes mapping classes in here.
 		Class[] mappings = new Class[] { Block.class, BlockPos.class, Entity.class, EntityLivingBase.class,
-				EntityPlayer.class, EntityPlayerSP.class, FontRenderer.class, GameSettings.class, Gui.class,
-				GuiIngame.class, GuiScreen.class, IBlockState.class, KeyBinding.class, Minecraft.class,
-				NetHandlerPlayClient.class, NetworkManager.class, PlayerControllerMP.class, TileEntity.class,
-				Timer.class, Vec3d.class, Vec3i.class, World.class, WorldClient.class };
+				EntityPlayer.class, EntityPlayerSP.class, FontRenderer.class, MainWindow.class, KeyboardListener.class,
+				GameSettings.class, Gui.class, GuiIngame.class, GuiScreen.class, IBlockState.class, KeyBinding.class,
+				Minecraft.class, NetHandlerPlayClient.class, NetworkManager.class, PlayerControllerMP.class,
+				TileEntity.class, Timer.class, Vec3d.class, Vec3i.class, World.class, WorldClient.class };
 		// Paste new events in here.
 		Class[] events = new Class[] { PreMotionUpdateEvent.class, GuiRenderEvent.class, AttackEntityEvent.class,
 				KeyDispatchEvent.class };

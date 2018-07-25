@@ -29,6 +29,14 @@ public interface Minecraft {
 	@Getter("g")
 	GuiScreen getCurrentScreen();
 	
+	@Getter("h")
+	KeyboardListener getKeyListener();
+	
+	@Getter("i")
+	MainWindow getMainWindow();
+	
 	@MethodProxy("a")
 	void displayGuiScreen(GuiScreen screen);
+
+	
 }

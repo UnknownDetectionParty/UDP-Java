@@ -36,13 +36,24 @@ public abstract class AbstractJsonGen {
 				add("e", "gameSettings");
 				add("f", "fontRendererObj", "fontRenderer");
 				add("g", "currentScreen");
+				add("h", "field_195559_v", "keyboardListener"); // KeyboardListener
+				add("i", "field_195558_d", "mainWindow"); // MainWindow
 			}}.array(), 
 			new Method() {{
 				add("a", "displayGuiScreen", "(Lnet/minecraft/client/gui/GuiScreen;)V");
 				add("sa", "getMinecraft", "()Lnet/minecraft/client/Minecraft;");
-				add("sb", "dispatchKeypresses", "()V", 
+			}}.array()), 
+		cls(MainWindow.class, "net/minecraft/client/MainWindow",
+				new Field() {{
+					add("a", "field_198119_f", "windowPointer"); // windowID
+				}}.array(),
+				new Method() {}.array()), 
+		cls(KeyboardListener.class, "net/minecraft/client/KeyboardListener",
+			new Field() {}.array(),
+			new Method() {{ 
+				add("a", "onKeyPressed" /* func_197961_a */, "(JIIII)V", // glfwKeyCallback
 					new Local() {{
-						add(KeyDispatchEvent.class, 0);
+						add(KeyDispatchEvent.class, 0, 3, 5);
 					}}.array());
 			}}.array()), 
 		cls(EntityPlayerSP.class, "net/minecraft/client/entity/EntityPlayerSP", 
@@ -148,7 +159,7 @@ public abstract class AbstractJsonGen {
 					add(GuiRenderEvent.class, 0, 0);
 				}}.array());
 			}}.array()),
-		cls(GameSettings.class, "net/minecraft/client/settings/GameSettings",
+		cls(GameSettings.class, "net/minecraft/client/GameSettings",
 			new Field() {{
 				add("a", "keyBindForward");
 				add("b", "keyBindLeft");

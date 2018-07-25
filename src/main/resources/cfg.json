@@ -1,76 +1,108 @@
 [
   {
-    "obfName": "bib",
+    "obfName": "cfi",
     "id": "-1595926131",
     "fieldMappings": [
       {
-        "obfName": "h",
-        "desc": "Lbud;",
+        "obfName": "i",
+        "desc": "Lcsy;",
         "id": "a"
       },
       {
-        "obfName": "Y",
-        "desc": "Lbih;",
+        "obfName": "S",
+        "desc": "Lcfo;",
         "id": "b"
       },
       {
-        "obfName": "c",
-        "desc": "Lbsa;",
+        "obfName": "e",
+        "desc": "Lcqu;",
         "id": "c"
       },
       {
-        "obfName": "f",
-        "desc": "Lbsb;",
+        "obfName": "g",
+        "desc": "Lcqv;",
         "id": "d"
       },
       {
         "obfName": "t",
-        "desc": "Lbid;",
+        "desc": "Lcfl;",
         "id": "e"
       },
       {
-        "obfName": "k",
-        "desc": "Lbip;",
+        "obfName": "l",
+        "desc": "Lcfz;",
         "id": "f"
       },
       {
         "obfName": "m",
-        "desc": "Lblk;",
+        "desc": "Lcjs;",
         "id": "g"
+      },
+      {
+        "obfName": "v",
+        "desc": "Lcff;",
+        "id": "h"
+      },
+      {
+        "obfName": "f",
+        "desc": "Lcfs;",
+        "id": "i"
       }
     ],
     "methodMappings": [
       {
         "obfName": "a",
-        "desc": "(Lblk;)V",
+        "desc": "(Lcjs;)V",
         "id": "a"
       },
       {
-        "obfName": "z",
-        "desc": "()Lbib;",
+        "obfName": "s",
+        "desc": "()Lcfi;",
         "id": "sa"
-      },
+      }
+    ]
+  },
+  {
+    "obfName": "cfs",
+    "id": "-1732330711",
+    "fieldMappings": [
       {
-        "obfName": "W",
-        "desc": "()V",
-        "id": "sb",
+        "obfName": "f",
+        "desc": "J",
+        "id": "a"
+      }
+    ],
+    "methodMappings": []
+  },
+  {
+    "obfName": "cff",
+    "id": "1635715547",
+    "fieldMappings": [],
+    "methodMappings": [
+      {
+        "obfName": "a",
+        "desc": "(JIIII)V",
+        "id": "a",
         "inj": [
           {
             "id": "-81501631",
             "pos": 0,
-            "locals": []
+            "locals": [
+              3,
+              5
+            ]
           }
         ]
       }
     ]
   },
   {
-    "obfName": "bud",
+    "obfName": "csy",
     "id": "618525217",
     "fieldMappings": [],
     "methodMappings": [
       {
-        "obfName": "N",
+        "obfName": "I",
         "desc": "()V",
         "id": "a",
         "inj": [
@@ -86,7 +118,7 @@
     ]
   },
   {
-    "obfName": "bih",
+    "obfName": "cfo",
     "id": "80811813",
     "fieldMappings": [
       {
@@ -103,7 +135,7 @@
     "methodMappings": []
   },
   {
-    "obfName": "bsa",
+    "obfName": "cqu",
     "id": "1658017760",
     "fieldMappings": [
       {
@@ -118,14 +150,14 @@
       },
       {
         "obfName": "b",
-        "desc": "Lbrz;",
+        "desc": "Lcqs;",
         "id": "c"
       }
     ],
     "methodMappings": [
       {
         "obfName": "a",
-        "desc": "(Laed;Lvg;)V",
+        "desc": "(Laoc;Laeo;)V",
         "id": "a",
         "inj": [
           {
@@ -141,19 +173,19 @@
     ]
   },
   {
-    "obfName": "brz",
+    "obfName": "cqs",
     "id": "2017127180",
     "fieldMappings": [
       {
-        "obfName": "c",
-        "desc": "Lgw;",
+        "obfName": "b",
+        "desc": "Lhw;",
         "id": "a"
       }
     ],
     "methodMappings": []
   },
   {
-    "obfName": "gw",
+    "obfName": "hw",
     "id": "-1870403137",
     "fieldMappings": [
       {
@@ -165,160 +197,154 @@
     "methodMappings": []
   },
   {
-    "obfName": "bsb",
+    "obfName": "cqv",
     "id": "-2123354659",
     "fieldMappings": [],
     "methodMappings": []
   },
   {
-    "obfName": "vg",
+    "obfName": "aeo",
     "id": "2080559107",
     "fieldMappings": [
       {
-        "obfName": "L",
+        "obfName": "M",
         "desc": "F",
         "id": "a"
       },
       {
-        "obfName": "s",
+        "obfName": "t",
         "desc": "D",
         "id": "b"
       },
       {
-        "obfName": "t",
+        "obfName": "u",
         "desc": "D",
         "id": "c"
       },
       {
-        "obfName": "u",
+        "obfName": "v",
         "desc": "D",
         "id": "d"
       },
       {
-        "obfName": "p",
+        "obfName": "q",
         "desc": "D",
         "id": "e"
       },
       {
-        "obfName": "q",
+        "obfName": "r",
         "desc": "D",
         "id": "f"
       },
       {
-        "obfName": "r",
+        "obfName": "s",
         "desc": "D",
         "id": "g"
       },
       {
-        "obfName": "z",
+        "obfName": "A",
         "desc": "Z",
         "id": "h"
       },
       {
-        "obfName": "v",
+        "obfName": "w",
         "desc": "F",
         "id": "i"
       },
       {
-        "obfName": "w",
+        "obfName": "x",
         "desc": "F",
         "id": "j"
       },
       {
-        "obfName": "T",
+        "obfName": "U",
         "desc": "I",
         "id": "k"
       },
       {
-        "obfName": "U",
+        "obfName": "V",
         "desc": "Z",
         "id": "l"
       },
       {
-        "obfName": "P",
+        "obfName": "Q",
         "desc": "F",
         "id": "m"
       },
       {
-        "obfName": "Q",
+        "obfName": "R",
         "desc": "Z",
         "id": "n"
       },
       {
-        "obfName": "E",
+        "obfName": "F",
         "desc": "Z",
         "id": "o"
       },
       {
-        "obfName": "F",
+        "obfName": "G",
         "desc": "Z",
         "id": "p"
       },
       {
-        "obfName": "m",
+        "obfName": "n",
         "desc": "D",
         "id": "q"
       },
       {
-        "obfName": "n",
+        "obfName": "o",
         "desc": "D",
         "id": "r"
       },
       {
-        "obfName": "o",
+        "obfName": "p",
         "desc": "D",
         "id": "s"
       },
       {
-        "obfName": "A",
+        "obfName": "B",
         "desc": "Z",
         "id": "t"
       },
       {
-        "obfName": "B",
+        "obfName": "C",
         "desc": "Z",
         "id": "u"
       },
       {
-        "obfName": "C",
+        "obfName": "D",
         "desc": "Z",
         "id": "v"
       },
       {
-        "obfName": "V",
+        "obfName": "Y",
         "desc": "I",
         "id": "w"
       }
     ],
     "methodMappings": [
       {
-        "obfName": "c",
-        "desc": "()Let;",
+        "obfName": "bH",
+        "desc": "()Lej;",
         "id": "a"
       },
       {
-        "obfName": "d",
-        "desc": "()Lbhe;",
+        "obfName": "bI",
+        "desc": "()Lcdt;",
         "id": "b"
       },
       {
-        "obfName": "g",
+        "obfName": "h",
         "desc": "(Z)V",
         "id": "c"
       }
     ]
   },
   {
-    "obfName": "bip",
+    "obfName": "cfz",
     "id": "-1230420398",
     "fieldMappings": [],
     "methodMappings": [
-      {
-        "obfName": "a",
-        "desc": "(Ljava/lang/String;FFIZ)I",
-        "id": "a",
-        "inj": []
-      },
       {
         "obfName": "a",
         "desc": "(Ljava/lang/String;FFI)I",
@@ -328,7 +354,7 @@
     ]
   },
   {
-    "obfName": "bir",
+    "obfName": "cgb",
     "id": "71963",
     "fieldMappings": [],
     "methodMappings": [
@@ -358,13 +384,13 @@
       },
       {
         "obfName": "a",
-        "desc": "(Lbip;Ljava/lang/String;III)V",
+        "desc": "(Lcfz;Ljava/lang/String;III)V",
         "id": "d",
         "inj": []
       },
       {
         "obfName": "c",
-        "desc": "(Lbip;Ljava/lang/String;III)V",
+        "desc": "(Lcfz;Ljava/lang/String;III)V",
         "id": "e",
         "inj": []
       },
@@ -377,22 +403,22 @@
     ]
   },
   {
-    "obfName": "blk",
+    "obfName": "cjs",
     "id": "-560118425",
     "fieldMappings": [
       {
-        "obfName": "l",
+        "obfName": "m",
         "desc": "I",
         "id": "a"
       },
       {
-        "obfName": "m",
+        "obfName": "n",
         "desc": "I",
         "id": "b"
       },
       {
-        "obfName": "q",
-        "desc": "Lbip;",
+        "obfName": "r",
+        "desc": "Lcfz;",
         "id": "c"
       }
     ],
@@ -406,7 +432,7 @@
     ]
   },
   {
-    "obfName": "biq",
+    "obfName": "cga",
     "id": "-836582510",
     "fieldMappings": [],
     "methodMappings": [
@@ -427,52 +453,52 @@
     ]
   },
   {
-    "obfName": "bid",
+    "obfName": "cfl",
     "id": "1754181205",
     "fieldMappings": [
       {
-        "obfName": "T",
-        "desc": "Lbhy;",
+        "obfName": "X",
+        "desc": "Lcfe;",
         "id": "a"
       },
       {
-        "obfName": "U",
-        "desc": "Lbhy;",
+        "obfName": "Y",
+        "desc": "Lcfe;",
         "id": "b"
       },
       {
-        "obfName": "V",
-        "desc": "Lbhy;",
+        "obfName": "Z",
+        "desc": "Lcfe;",
         "id": "c"
       },
       {
-        "obfName": "W",
-        "desc": "Lbhy;",
+        "obfName": "aa",
+        "desc": "Lcfe;",
         "id": "d"
       },
       {
-        "obfName": "X",
-        "desc": "Lbhy;",
+        "obfName": "ab",
+        "desc": "Lcfe;",
         "id": "e"
       },
       {
-        "obfName": "Y",
-        "desc": "Lbhy;",
+        "obfName": "ac",
+        "desc": "Lcfe;",
         "id": "f"
       },
       {
-        "obfName": "ae",
-        "desc": "Lbhy;",
+        "obfName": "ai",
+        "desc": "Lcfe;",
         "id": "g"
       },
       {
-        "obfName": "Z",
-        "desc": "Lbhy;",
+        "obfName": "ad",
+        "desc": "Lcfe;",
         "id": "h"
       },
       {
-        "obfName": "aE",
-        "desc": "F",
+        "obfName": "aI",
+        "desc": "D",
         "id": "i"
       },
       {
@@ -484,7 +510,7 @@
     "methodMappings": []
   },
   {
-    "obfName": "bhy",
+    "obfName": "cfe",
     "id": "-2034799802",
     "fieldMappings": [
       {
@@ -499,12 +525,12 @@
       },
       {
         "obfName": "f",
-        "desc": "I",
+        "desc": "Lcfd$a;",
         "id": "c"
       },
       {
         "obfName": "h",
-        "desc": "I",
+        "desc": "Lcfd$a;",
         "id": "d"
       },
       {
@@ -521,64 +547,53 @@
     "methodMappings": []
   },
   {
-    "obfName": "aow",
+    "obfName": "bcj",
     "id": "64279661",
-    "fieldMappings": [
-      {
-        "obfName": "d",
-        "desc": "Ljava/lang/String;",
-        "id": "a"
-      }
-    ],
+    "fieldMappings": [],
     "methodMappings": [
       {
         "obfName": "a",
-        "desc": "(Laow;)I",
-        "id": "a"
-      },
-      {
-        "obfName": "c",
-        "desc": "(I)Laow;",
+        "desc": "(I)Lbcj;",
         "id": "b"
       }
     ]
   },
   {
-    "obfName": "amu",
+    "obfName": "axs",
     "id": "83766130",
     "fieldMappings": [
       {
-        "obfName": "e",
+        "obfName": "f",
         "desc": "Ljava/util/List;",
         "id": "a"
       },
       {
-        "obfName": "g",
+        "obfName": "h",
         "desc": "Ljava/util/List;",
         "id": "b"
       },
       {
-        "obfName": "i",
+        "obfName": "j",
         "desc": "Ljava/util/List;",
         "id": "c"
       }
     ],
     "methodMappings": [
       {
-        "obfName": "o",
-        "desc": "(Let;)Lawt;",
+        "obfName": "a_",
+        "desc": "(Lej;)Lbkt;",
         "id": "a"
       }
     ]
   },
   {
-    "obfName": "et",
+    "obfName": "ej",
     "id": "-599952729",
     "fieldMappings": [],
     "methodMappings": []
   },
   {
-    "obfName": "fq",
+    "obfName": "ff",
     "id": "82528522",
     "fieldMappings": [
       {
@@ -606,7 +621,7 @@
     ]
   },
   {
-    "obfName": "bhe",
+    "obfName": "cdt",
     "id": "82528517",
     "fieldMappings": [
       {
@@ -628,59 +643,49 @@
     "methodMappings": [
       {
         "obfName": "f",
-        "desc": "(Lbhe;)D",
+        "desc": "(Lcdt;)D",
         "id": "a"
       },
       {
         "obfName": "a",
-        "desc": "(DDD)Lbhe;",
+        "desc": "(DDD)Lcdt;",
         "id": "b"
       },
       {
-        "obfName": "b",
-        "desc": "(DDD)Lbhe;",
-        "id": "c"
-      },
-      {
-        "obfName": "b",
-        "desc": "()D",
-        "id": "d"
-      },
-      {
         "obfName": "e",
-        "desc": "(Lbhe;)Lbhe;",
+        "desc": "(Lcdt;)Lcdt;",
         "id": "e"
       },
       {
         "obfName": "d",
-        "desc": "(Lbhe;)Lbhe;",
+        "desc": "(Lcdt;)Lcdt;",
         "id": "f"
       }
     ]
   },
   {
-    "obfName": "awt",
+    "obfName": "bkt",
     "id": "940487981",
     "fieldMappings": [],
     "methodMappings": [
       {
-        "obfName": "u",
-        "desc": "()Laow;",
+        "obfName": "c",
+        "desc": "()Lbcj;",
         "id": "a"
       }
     ]
   },
   {
-    "obfName": "vp",
+    "obfName": "aex",
     "id": "486868349",
     "fieldMappings": [
       {
-        "obfName": "be",
+        "obfName": "bh",
         "desc": "F",
         "id": "a"
       },
       {
-        "obfName": "bg",
+        "obfName": "bj",
         "desc": "F",
         "id": "b"
       }
