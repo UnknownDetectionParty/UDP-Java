@@ -12,7 +12,7 @@ Tool for generating mapping jsons for some version of Minecraft.
 * run via eclipse and edit default values _(fast but improper way)_
 
 **Parameters**: 
-* `mc_version` _(default:1.12.2)_: Version of minecaft to build mappings for. Versions should be fully quantified _(don't use `1.12` and expect it to work for `1.12.2`)_
+* `mc_version` _(default:1.13.0)_: Version of minecaft to build mappings for. Versions should be fully quantified _(don't use `1.12` and expect it to work for `1.12.2`)_
 * `mapping_source` _(default:forge)_: The method of fetching mappings. Potential values: 
     *  `mcp` or `online`: Pull mappings from [mcpbot.bspk.rs](http://export.mcpbot.bspk.rs/versions.json). Limited version support to what is in the linked file.
     *  `forge`: Pull mappings from locally stored forge mappings. Forge drops mapping files in your `%home%\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\` directory. When you run the forge Mod Development Kit *(mdk)* it generates all the neccesary mappings and places them there. 

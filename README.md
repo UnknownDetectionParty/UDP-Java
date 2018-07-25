@@ -13,7 +13,7 @@ UDP-Java is fairly easy to set up as most of the process is handled automaticall
 1. Make sure you have the JDK, Minecraft, and [Maven](https://maven.apache.org/install.html) installed.
 2. Clone/download the repository then open it in your IDE
     1. For eclipse you open the project via `File > Import > Maven > Existing Maven Project`
-3. Change the target version *(Minecraft version to modify, default is 1.12.2)*
+3. Change the target version *(Minecraft version to modify, default is 1.13.0, see notes in MappingGen when running for versions after 1.12.2)*
     1. Open `\src\main\java\mapping\MappingGen.java`
     2. Modify the version string to whichever version you want to target.
         1. Version must either be supported by MCP *(use the MCPOnlineJsonGen)* or by Forge *(use the MCPJsonGen)*
