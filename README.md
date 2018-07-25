@@ -78,7 +78,10 @@ UDP-Java is build on the following libraries and frameworks:
 * [Objectweb ASM: 5.2](http://asm.ow2.org/)
 * [Google Guava: 22.0](https://github.com/google/guava)
 * [Google Gson: 2.8.1](https://github.com/google/gson)
-* [LWJGL: 2.9.3](https://www.lwjgl.org/)
+* _(if you edit 1.12 and below)_
+    * [LWJGL: 2.9.3](https://www.lwjgl.org/)
+* _(if you edit 1.13 and above)_
+    * [LWJGL: 3.1.6](https://www.lwjgl.org/)
 
 ***
 
