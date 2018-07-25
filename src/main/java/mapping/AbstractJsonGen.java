@@ -263,7 +263,7 @@ public abstract class AbstractJsonGen {
 		if (pretty) {
 			builder = builder.setPrettyPrinting();
 		}
-		return builder.create().toJson(config).replace("null,", "").replace("null", "");
+		return builder.create().toJson(config).replace("null,", "").replace(",null", "").replace("null", "");
 	}
 
 	/**

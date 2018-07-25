@@ -233,8 +233,7 @@ public class MCPJsonGen extends AbstractJsonGen {
 
 			}
 			for (JsonMethodMapping methodMapping : classMapping.getMethodMappings()) {
-				MethodData obf = methodMCPToObf
-						.get(new MethodData(origName, methodMapping.getObfName(), methodMapping.getDesc()));
+				MethodData obf = methodMCPToObf.get(new MethodData(origName, methodMapping.getMcpAlias(), methodMapping.getDesc()));
 				if (obf != null) {
 					methodMapping.setObfName(obf.name);
 					methodMapping.setDesc(obf.desc);
@@ -256,6 +255,15 @@ public class MCPJsonGen extends AbstractJsonGen {
 					p("\tRemove: " + classMapping.getObfName() + "#" + field.getMcpAliases()[0] + " (" + field.getId()
 							+ ")");
 					fields[i] = null;
+				}
+			}
+			JsonMethodMapping[] methods = classMapping.getMethodMappings();
+			for (int i = methods.length - 1; i >= 0; i--) {
+				JsonMethodMapping method = methods[i];
+				if (method.getObfName() == null) {
+					p("\tRemove: " + classMapping.getObfName() + "#" + method.getMcpAlias() + " (" + method.getId()
+							+ ")");
+					methods[i] = null;
 				}
 			}
 		}
